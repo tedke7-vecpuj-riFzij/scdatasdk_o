@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'SCDataSDK_O_Example' do
+  pod 'SCDataSDK_O', :path => '../'
+
+  target 'SCDataSDK_O_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
