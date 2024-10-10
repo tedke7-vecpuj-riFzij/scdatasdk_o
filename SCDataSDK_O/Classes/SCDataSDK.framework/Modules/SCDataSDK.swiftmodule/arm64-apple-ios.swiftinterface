@@ -1,0 +1,168 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0 effective-4.1.50 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
+// swift-module-flags: -target arm64-apple-ios9.0 -enable-objc-interop -enable-library-evolution -swift-version 4 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name SCDataSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import CoreTelephony
+import Foundation
+import Network
+@_exported import SCDataSDK
+import SQLite
+import Swift
+import SystemConfiguration
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class SCDataLocation : ObjectiveC.NSObject {
+  @objc public init(latitude: Swift.String, longitude: Swift.String)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objcMembers @objc public class SCDataEvent : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objcMembers @objc public class SCDataLoginEvent : SCDataSDK.SCDataEvent, Swift.Codable {
+  @objc public var userId: Swift.String
+  @objc public var operateType: Swift.Int
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @objcMembers @objc public class SCDataAccessSourceEvent : SCDataSDK.SCDataEvent, Swift.Codable {
+  @objc public var sourceId: Swift.String
+  @objc public var summary: Swift.String
+  @objc public var offtime: Swift.String
+  @objc public var path: Swift.String
+  @objc public var timeLength: Swift.Int
+  @objc public var sourceType: Swift.Int
+  @objc public var action: Swift.Int
+  @objc public var sourceName: Swift.String
+  @objc public var sourceTag: Swift.String
+  @objc public var channelId: Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @objcMembers @objc public class SCDataAccessPageEvent : SCDataSDK.SCDataEvent, Swift.Codable {
+  @objc public var operateType: Swift.Int
+  @objc public var sourceName: Swift.String
+  @objc public var sourceId: Swift.String
+  @objc public var action: Swift.Int
+  @objc public var timeLength: Swift.Int
+  @objc public var isHome: Swift.Int
+  @objc public var sourceType: Swift.Int
+  @objc public var sourcePage: Swift.String
+  @objc public var pChannel: Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @objcMembers @objc public class SCDataCollectEvent : SCDataSDK.SCDataEvent, Swift.Codable {
+  @objc public var sourceId: Swift.String
+  @objc public var sourceName: Swift.String
+  @objc public var operationType: Swift.Bool
+  @objc public var sourceType: Swift.Int
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @objcMembers @objc public class SCDataCommentEvent : SCDataSDK.SCDataEvent, Swift.Codable {
+  @objc public var sourceName: Swift.String
+  @objc public var sourceId: Swift.String
+  @objc public var commentDetail: Swift.String
+  @objc public var sourceType: Swift.Int
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @objcMembers @objc public class SCDataForwardEvent : SCDataSDK.SCDataEvent, Swift.Codable {
+  @objc public var sourceName: Swift.String
+  @objc public var sourceId: Swift.String
+  @objc public var sourceType: Swift.Int
+  @objc public var channelId: Swift.Int
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @objcMembers @objc public class SCDataPraiseEvent : SCDataSDK.SCDataEvent, Swift.Codable {
+  @objc public var sourceName: Swift.String
+  @objc public var sourceId: Swift.String
+  @objc public var sourceType: Swift.Int
+  @objc public var operationType: Swift.Int
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @objcMembers @objc public class SCDataLiveEvent : SCDataSDK.SCDataEvent, Swift.Codable {
+  @objc public var sourceName: Swift.String
+  @objc public var sourceId: Swift.String
+  @objc public var heartbeatLength: Swift.Int
+  @objc public var liveType: Swift.Int
+  @objc public var offtime: Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @objcMembers @objc public class SCDataSearchEvent : SCDataSDK.SCDataEvent, Swift.Codable {
+  @objc public var content: Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @objcMembers @objc public class SCDataVideoPlayEvent : SCDataSDK.SCDataEvent, Swift.Codable {
+  @objc public var sourceName: Swift.String
+  @objc public var sourceId: Swift.String
+  @objc public var contentLength: Swift.Int
+  @objc public var isComplete: Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @objcMembers @objc public class SCDataBrokeNewsEvent : SCDataSDK.SCDataEvent, Swift.Codable {
+  @objc public var sourceId: Swift.String
+  @objc public var sourceContent: Swift.String
+  @objc public var blTitle: Swift.String
+  @objc public var sourceType: Swift.Int
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @objcMembers @objc public class SCDataBasicInfoEvent : SCDataSDK.SCDataEvent, Swift.Codable {
+  @objc public var idfa: Swift.String
+  @objc public var sex: Swift.Int
+  @objc public var age: Swift.Int
+  @objc public var phoneNumber: Swift.String
+  @objc public var phoneType: Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @objcMembers @objc public class SCDataPushEvent : SCDataSDK.SCDataEvent, Swift.Codable {
+  @objc public var sourceId: Swift.String
+  @objc public var sourceType: Swift.Int
+  @objc public var sourceName: Swift.String
+  @objc public var operateType: Swift.Int
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class SCDataService : ObjectiveC.NSObject {
+  @discardableResult
+  @objc public class func registerApp(areaId: Swift.String, token: Swift.String, userId: Swift.String = "", latitude: Swift.String = "", longtitude: Swift.String = "", logEnable: Swift.Bool = false) -> Swift.Bool
+  @objc public class func currentVersion() -> Swift.String
+  @objc public class func trackEvent(_ event: SCDataSDK.SCDataEvent, immediately: Swift.Bool = false)
+  @objc public class func setLocation(location: SCDataSDK.SCDataLocation)
+  @objc deinit
+}

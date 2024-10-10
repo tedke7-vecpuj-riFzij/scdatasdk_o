@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SCDataSDK_O'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of SCDataSDK_O.'
+  s.version          = '2.0.0'
+  s.summary          = '天融埋点采集SDK'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,25 +18,18 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  天融埋点采集SDK
                        DESC
 
   s.homepage         = 'https://github.com/张建/SCDataSDK_O'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { '张建' => 'micheal@thecover.co' }
-  s.source           = { :git => 'https://github.com/张建/SCDataSDK_O.git', :tag => s.version.to_s }
+  s.author           = { 'micheal' => 'micheal@thecover.co' }
+  s.source           = { :git => 'https://github.com/micheal/SCDataSDK_O.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '10.0'
-
-  s.source_files = 'SCDataSDK_O/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'SCDataSDK_O' => ['SCDataSDK_O/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.ios.deployment_target = '9.0'
+  s.vendored_frameworks = ['SCDataSDK_O/Classes/SCDataSDK.framework']
+  s.frameworks = 'Network', 'CoreTelephony', 'SystemConfiguration'
+  s.dependency 'SQLite.swift'
 end

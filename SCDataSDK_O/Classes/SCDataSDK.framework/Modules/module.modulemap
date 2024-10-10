@@ -1,0 +1,11 @@
+framework module SCDataSDK {
+  umbrella header "SCDataSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module SCDataSDK.Swift {
+  header "SCDataSDK-Swift.h"
+  requires objc
+}
