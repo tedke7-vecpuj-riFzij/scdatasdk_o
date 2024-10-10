@@ -1,0 +1,6 @@
+framework module Pods_SCDataSDK_O_Tests {
+  umbrella header "Pods-SCDataSDK_O_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

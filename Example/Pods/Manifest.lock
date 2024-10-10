@@ -1,0 +1,25 @@
+PODS:
+  - SCDataSDK_O (2.0.0):
+    - SQLite.swift
+  - SQLite.swift (0.14.1):
+    - SQLite.swift/standard (= 0.14.1)
+  - SQLite.swift/standard (0.14.1)
+
+DEPENDENCIES:
+  - SCDataSDK_O (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - SQLite.swift
+
+EXTERNAL SOURCES:
+  SCDataSDK_O:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SCDataSDK_O: e4a755aa18d87da6b5c5d885ff8f9d2a71171a6a
+  SQLite.swift: 2992550ebf3c5b268bf4352603e3df87d2a4ed72
+
+PODFILE CHECKSUM: 3ef12863e2a940aba4fe34beb01e5671b1563881
+
+COCOAPODS: 1.15.2

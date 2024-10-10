@@ -1,3 +1,5 @@
+source 'https://cdn.cocoapods.org/'
+
 use_frameworks!
 
 platform :ios, '10.0'
@@ -8,6 +10,5 @@ target 'SCDataSDK_O_Example' do
   target 'SCDataSDK_O_Tests' do
     inherit! :search_paths
 
-    
   end
 end

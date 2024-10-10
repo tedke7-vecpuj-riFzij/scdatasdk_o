@@ -1,0 +1,6 @@
+framework module SCDataSDK_O {
+  umbrella header "SCDataSDK_O-umbrella.h"
+
+  export *
+  module * { export * }
+}

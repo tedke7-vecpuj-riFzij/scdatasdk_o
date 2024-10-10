@@ -7,6 +7,7 @@
 //
 
 @import UIKit;
+@import SCDataSDK;
 
 @interface SCDATAAppDelegate : UIResponder <UIApplicationDelegate>
 
