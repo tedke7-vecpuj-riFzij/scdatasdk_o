@@ -25,9 +25,9 @@ Pod::Spec.new do |s|
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'micheal' => 'micheal@thecover.co' }
-  s.source           = { :git => 'https://github.com/micheal/SCDataSDK_O.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/tedke7-vecpuj-riFzij/scdatasdk_o.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
+  s.resource_bundles = {"SCDataSDK_O" => ["SCDataSDK_O/Assets/PrivacyInfo.xcprivacy"]}
   s.ios.deployment_target = '9.0'
   s.vendored_frameworks = ['SCDataSDK_O/Classes/SCDataSDK.framework']
   s.frameworks = 'Network', 'CoreTelephony', 'SystemConfiguration'

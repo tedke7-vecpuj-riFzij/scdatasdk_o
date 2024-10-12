@@ -12,8 +12,13 @@
     "micheal": "micheal@thecover.co"
   },
   "source": {
-    "git": "https://github.com/micheal/SCDataSDK_O.git",
+    "git": "https://github.com/tedke7-vecpuj-riFzij/scdatasdk_o.git",
     "tag": "2.0.0"
+  },
+  "resource_bundles": {
+    "SCDataSDK_O": [
+      "SCDataSDK_O/Assets/PrivacyInfo.xcprivacy"
+    ]
   },
   "platforms": {
     "ios": "9.0"
